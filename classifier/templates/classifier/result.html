@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result - Image Classifier</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'classifier/style.css' %}">
+</head>
+<body>
+    <h1>Prediction Result</h1>
+
+    <p>Here’s your uploaded image:</p>
+    <img src="{{ file_url }}" alt="Uploaded Image" width="300">
+
+    <h2>Prediction: {{ predicted_label }}</h2>
+    <p>Confidence: {{ confidence }}%</p>
+
+    <br>
+    <a href="/">Upload another image</a>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Classifier</title>
+  <link rel="stylesheet" href="{% static 'classifier/style.css' %}">
+</head>
+<body>
+  <h1>Upload an Image for Classification</h1>
+
+  <form method="POST" enctype="multipart/form-data" action="/predict/">
+      {% csrf_token %}
+      <input type="file" name="file" accept="image/*" required>
+      <br>
+      <button type="submit">Upload & Predict</button>
+  </form>
+</body>
+</html>
